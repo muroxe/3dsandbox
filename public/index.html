@@ -2,32 +2,27 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>3D Sandbox Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sandbox Multiplayer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Three.js и Socket.io -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-    <div id="ui">
-        <h3>Меню вещей</h3>
-        <button onclick="spawnItem('cube')" class="menu-btn">Куб</button>
-        <button onclick="spawnItem('sphere')" class="menu-btn">Сфера</button>
+    <div id="ui-container">
+        <button id="fullscreen-btn">Полноэкранный режим</button>
+        <div id="item-menu">
+            <h3>Меню вещей</h3>
+            <button onclick="spawnItem('cube')">Создать Куб</button>
+            <button onclick="spawnItem('sphere')">Создать Сферу</button>
+        </div>
+        <div id="instructions">
+            Управление: W, A, S, D<br>
+            Хватать/Отпустить игрока: E (подойдите вплотную)
+        </div>
     </div>
 
-    <!-- Мобильное управление -->
-    <div id="mobile-controls">
-        <div id="joystick-zone">
-            <div id="joystick-stick"></div>
-        </div>
-        
-        <div id="action-buttons">
-            <button id="btn-jump" class="action-btn jump-btn">Прыжок</button>
-            <button id="btn-grab" class="action-btn">Схватить</button>
-            <button id="btn-throw" class="action-btn throw-btn">Кинуть</button>
-        </div>
-    </div>
-    
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="client.js"></script>
 </body>
 </html>
