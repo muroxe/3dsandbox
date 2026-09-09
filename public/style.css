@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+}
+
+#ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+#ui h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.menu-btn {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.menu-btn:hover {
+    background: #45a049;
+}
+
+#mobile-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    pointer-events: none;
+    z-index: 20;
+}
+
+#joystick-zone {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+#joystick-stick {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+}
+
+#action-buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    pointer-events: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #2196F3;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 11px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.action-btn:active {
+    background: #1976D2;
+    transform: scale(0.95);
+}
+
+.throw-btn {
+    background: #FF5722;
+}
+
+.throw-btn:active {
+    background: #E64A19;
+}
+
+.jump-btn {
+    background: #9C27B0;
+}
+
+.jump-btn:active {
+    background: #7B1FA2;
+  }
+  
