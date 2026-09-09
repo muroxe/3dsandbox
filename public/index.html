@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Блокируем зум на мобилках -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D Sandbox Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui">
+        <h3>Меню вещей</h3>
+        <button onclick="spawnItem('cube')" class="menu-btn">Куб</button>
+        <button onclick="spawnItem('sphere')" class="menu-btn">Сфера</button>
+    </div>
+
+    <!-- Мобильное управление -->
+    <div id="mobile-controls">
+        <!-- Зона джойстика -->
+        <div id="joystick-zone">
+            <div id="joystick-stick"></div>
+        </div>
+        
+        <!-- Кнопки действий -->
+        <div id="action-buttons">
+            <button id="btn-grab" class="action-btn">Схватить</button>
+            <button id="btn-throw" class="action-btn throw-btn">Кинуть</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
